@@ -171,7 +171,6 @@ func (h *BinaryIntHeap) PopAll() []int {
 }
 
 func NewBinaryIntHeap(data []int, isMax bool) *BinaryIntHeap {
-	fmt.Println("Create BinaryIntHeap for data:", data)
 	h := BinaryIntHeap{
 		root:  nil,
 		Count: 0,
