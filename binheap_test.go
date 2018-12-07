@@ -80,3 +80,12 @@ func TestBinMinHeap(t *testing.T) {
 		t.Errorf("Golang library sorted: %v", arr)
 	}
 }
+
+func BenchmarkBinHeap(b *testing.B) {
+	isMax := true
+	h := NewBinaryIntHeap([]int{}, isMax)
+  b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+			h.Insert(i)
+	}
+}
