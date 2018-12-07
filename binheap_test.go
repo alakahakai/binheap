@@ -3,8 +3,8 @@ package binheap
 import (
 	"math/rand"
 	"sort"
+	"testing"
 	"time"
-  "testing"
 )
 
 func reverseSlice(a []int) {
@@ -46,8 +46,8 @@ func TestBinMaxHeap(t *testing.T) {
 		}
 	}
 	d := h.PopAll()
-  sort.Ints(arr)
-  reverseSlice(arr)
+	sort.Ints(arr)
+	reverseSlice(arr)
 	if !isSameSlice(d, arr) {
 		t.Errorf("Test failed!")
 		t.Errorf("Binheap sorted: %v", d)
